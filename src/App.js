@@ -2,6 +2,7 @@ import {NavLink, Route, Routes, useSearchParams, Navigate} from 'react-router-do
 import { CreatePost } from './component/CreatedPost/CreatePost';
 import './App.css';
 import { List } from './component/List/List';
+import { Publication } from './component/Publication/Publication';
 
 // const Redirect = () => {
 //   return (

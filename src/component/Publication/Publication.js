@@ -1,7 +1,7 @@
 import './Publication.css'
 import React, {useState} from 'react'
 import shortid from 'shortid';
-import { Navigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 
 export const Publication = () => {
@@ -11,11 +11,11 @@ export const Publication = () => {
         const { value } = e.target;
         setContent(value);
     };
-const close = () => {
-    return (
-            <Navigate to='/sdfsfsfsfsdf' replace/>
-    )
-}
+// const close = () => {
+//     return (
+//             <Navigate to='/sdfsfsfsfsdf' replace/>
+//     )
+// }
 
     const addForm = (e) => {
         e.preventDefault();
@@ -28,18 +28,20 @@ const close = () => {
                 return false
             } 
           console.log('ok')
-          
         }
         xhr.send(newObject);
         setContent("");
+        return (
+            <Link to='/' />
+        )
     };
 
 
     return (
         <form onSubmit={addForm}>
             <textarea name="new_post" className="window_texts" value={content} onChange={editingDate}></textarea>
-            <button className="btn_post" type='submit' element={close}>Опубликовать</button>
-            asdada
+            <button className="btn_post" type='submit'>Опубликовать</button>
+            {/* <Link className="btn_post" type='submit'  to='/'>Опубликовать </Link> */}
         </form>
     )
 }
