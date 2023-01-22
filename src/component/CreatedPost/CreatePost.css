@@ -1,0 +1,48 @@
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(21, 88, 144) ;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .menu {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #aaa;
+  }
+
+  .menu__item {
+    color: rgb(21, 88, 144);
+    text-decoration: none;
+    padding-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .active {
+    color: black;
+  }
+
+
+  .a {
+    width: 100%;
+    border: yellow;
+  }

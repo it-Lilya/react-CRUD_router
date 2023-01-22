@@ -1,0 +1,16 @@
+.window_texts {
+    margin-top: 20px;
+    width: 100%;
+    resize: none;
+    height: 100px;
+    border-bottom: 1px solid #aaa;
+}
+
+.btn_post {
+    float: right;
+    background-color: rgb(21, 88, 144) ;
+    color: white;
+    font-weight: 500;
+    border: none;
+    padding: 8px;
+}
