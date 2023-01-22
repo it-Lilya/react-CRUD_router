@@ -1,23 +1,16 @@
 import React from "react";
 import "./CreatePost.css";
-import { NavLink, Routes, Route, Navigate } from "react-router-dom";
+import { Link,NavLink, Routes, Route, Navigate } from "react-router-dom";
 import { Publication } from "../Publication/Publication";
 import { PhotoVideo } from "../PhotoVideo/PhotoVideo";
 import { Ether } from "../Ether/Ether";
 import { More } from "../More/More";
 
 const Header = () => {
-  const close = () => {
-    const form = document.getElementById("form");
-    form.classList.remove("active");
-  };
-
-
   return (
-    <form className="modal-content" id="form">
-      <span className="close" onClick={close}>
-        &times;
-      </span>
+    <div className="modal-content" id="form">
+      <form className="form-content"> 
+      <Link className="close" to='/'>&times; </Link>
       <div className="menu">
         <NavLink className="menu__item" to="/post/new/publication">
           <h4>Публикация</h4>
@@ -32,7 +25,8 @@ const Header = () => {
           <h4>Ещё</h4>
         </NavLink>
       </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
@@ -41,10 +35,10 @@ export const CreatePost = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/publication" element={<Publication />} />
-        <Route path="/photoVideo" element={<PhotoVideo />} />
-        <Route path="/ether" element={<Ether />} />
-        <Route path="/more" element={<More />} />
+        <Route path="/post/new/publication" element={<Publication />} />
+        <Route path="/post/new/photoVideo" element={<PhotoVideo />} />
+        <Route path="/post/new/ether" element={<Ether />} />
+        <Route path="/post/new/more" element={<More />} />
       </Routes>
     </>
   );

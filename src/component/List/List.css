@@ -5,7 +5,24 @@
     margin-bottom: 10px;
 }
 
+.info {
+    display: flex;
+    /* justify-content: space-between; */
+}
 
+.avatar {
+    width: 90px;
+    border-radius: 45px;
+}
+
+.contain {
+    margin-left: 70px;
+}
+
+.name {
+    color: rgb(21, 88, 144);
+    font-weight: 600;
+}
 
 .bottom-buttons {
     display: flex;
