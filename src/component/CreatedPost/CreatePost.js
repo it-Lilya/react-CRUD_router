@@ -1,6 +1,6 @@
 import React from "react";
 import "./CreatePost.css";
-import { Link,NavLink, Routes, Route, Navigate } from "react-router-dom";
+import { Link,NavLink, Routes, Route} from "react-router-dom";
 import { Publication } from "../Publication/Publication";
 import { PhotoVideo } from "../PhotoVideo/PhotoVideo";
 import { Ether } from "../Ether/Ether";
@@ -35,10 +35,10 @@ export const CreatePost = () => {
     <>
       <Header />
       <Routes>
-        <Route path="/post/new/publication" element={<Publication />} />
-        <Route path="/post/new/photoVideo" element={<PhotoVideo />} />
-        <Route path="/post/new/ether" element={<Ether />} />
-        <Route path="/post/new/more" element={<More />} />
+        <Route path="/publication" element={<Publication />} />
+        <Route path="/photoVideo" element={<PhotoVideo />} />
+        <Route path="/ether" element={<Ether />} />
+        <Route path="/more" element={<More />} />
       </Routes>
     </>
   );

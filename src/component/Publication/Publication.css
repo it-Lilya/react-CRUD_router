@@ -1,8 +1,13 @@
+.form-input {
+    height: 150px;
+    margin-top: 20px;
+}
+
 .window_texts {
     margin-top: 20px;
     width: 100%;
     resize: none;
-    height: 100px;
+    height: 80px;
     border-bottom: 1px solid #aaa;
 }
 
@@ -13,4 +18,5 @@
     font-weight: 500;
     border: none;
     padding: 8px;
+    margin-top: 10px;
 }

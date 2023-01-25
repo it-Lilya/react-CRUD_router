@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
 import './List.css';
 import {NavLink} from 'react-router-dom';
@@ -10,15 +9,12 @@ export const List = () => {
   fetch("http://localhost:7777/posts")
     .then((response) => response.json())
     .then((data) => setResult(data));
-
-
-
-
+    
   return (
     <>
       <ul className="list-container">
         {result.map((o) => (
-          <li key={o.id} className='element_lists'>
+          <li to={`/posts/${o.id}`} className='element_lists'>
             <div className="info">
               <img className="avatar" src='https://s13.stc.yc.kpcdn.net/share/i/instagram/B44solahwlo/wr-1280.webp' />
               <div className="contain">

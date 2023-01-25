@@ -1,7 +1,5 @@
 export function Ether() {
     return (
-        <div>!!!!!!!!!!!!!!KNKNKNNKNJ
-            Ether
-        </div>
+        <div>Ether</div>
     )
 }

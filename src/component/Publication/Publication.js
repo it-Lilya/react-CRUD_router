@@ -1,22 +1,18 @@
 import './Publication.css'
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import shortid from 'shortid';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, NavLink} from 'react-router-dom';
 
 
 export const Publication = () => {
     const [content, setContent] = useState("");
 
+
     const editingDate = (e) => {
         const { value } = e.target;
         setContent(value);
     };
-// const close = () => {
-//     return (
-//             <Navigate to='/sdfsfsfsfsdf' replace/>
-//     )
-// }
-
+    
     const addForm = (e) => {
         e.preventDefault();
         const newObject = JSON.stringify({id: shortid.generate(), content: content});
@@ -26,22 +22,19 @@ export const Publication = () => {
         xhr.onload = () => {
             if (xhr.status !== 204) {
                 return false
-            } 
-          console.log('ok')
-        }
+            }
+        } 
         xhr.send(newObject);
         setContent("");
-        return (
-            <Link to='/' />
-        )
+        window.location = 'http://localhost:3000/'
     };
-
+      
 
     return (
-        <form onSubmit={addForm}>
+        <form className='form-input' onSubmit={addForm}>
             <textarea name="new_post" className="window_texts" value={content} onChange={editingDate}></textarea>
             <button className="btn_post" type='submit'>Опубликовать</button>
-            {/* <Link className="btn_post" type='submit'  to='/'>Опубликовать </Link> */}
+            {/* <NavLink className="btn_post" type='submit' to='/'>Опубликовать </NavLink> */}
         </form>
     )
 }

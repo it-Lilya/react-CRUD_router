@@ -1,29 +1,19 @@
-import {NavLink, Route, Routes, useSearchParams, Navigate} from 'react-router-dom';
+import {NavLink, Route, Routes} from 'react-router-dom';
 import { CreatePost } from './component/CreatedPost/CreatePost';
 import './App.css';
 import { List } from './component/List/List';
-import { Publication } from './component/Publication/Publication';
-
-// const Redirect = () => {
-//   return (
-//     <Navigate to={'/'} />
-//   )
-// }
+import { Element } from './component/Element/Element';
 
 function App() {
-  const openForm = () => {
-    const form = document.getElementById('form');
-    form.classList.toggle('active');
-  }
-
   return (
     <div className="container">
       <div className='btn'>
-        <NavLink to='/post/new/*' className='create_button' onClick={openForm}>Создать пост</NavLink>
+        <NavLink className='create_button' to='/post/new/publication'>Создать пост </NavLink>
       </div>
         <Routes> 
           <Route path='/' element={<List />} /> 
           <Route path='/post/new/*' element={<CreatePost />} />
+          <Route path={`/posts/{id}`} element={<Element />} />
         </Routes>
     </div>
   );
