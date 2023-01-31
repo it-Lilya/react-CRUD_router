@@ -1,0 +1,46 @@
+.info-new {
+    padding: 20px;
+    background-color: white;
+}
+
+.contains {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.names {
+    margin-left: 30px;
+    color: rgb(21, 88, 144);
+    font-weight: 600;
+}
+
+.bottom-buttons {
+    display: flex;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+.editings, .delete {
+    border: none;
+    width: 100px;
+    color: white;
+    font-size: 16px;
+}
+
+.editings {
+    background-color: rgb(21, 88, 144);
+    margin-right: 10px;
+    text-decoration: none;
+    padding-top: 2px;
+}
+
+.delete {
+    background-color: rgb(145, 42, 42);
+    padding-bottom: 2px;
+    height: 28px;
+}

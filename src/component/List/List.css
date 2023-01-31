@@ -1,13 +1,25 @@
 .element_lists {
     background-color: white;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: black;
     list-style-type: none;
-    padding: 20px;
-    margin-bottom: 10px;
 }
 
 .info {
     display: flex;
-    /* justify-content: space-between; */
+    position: relative;
+}
+
+.list-content {
+    background-color: white;
+    border: solid white;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding-left: 30px;
 }
 
 .avatar {
@@ -17,6 +29,19 @@
 
 .contain {
     margin-left: 70px;
+}
+
+.edit {
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    position: absolute;
+    font-weight: 700;
+    font-size: 19px;
+    color: green;
+    right: 0;
+    border: none;
+    background-color: white;
 }
 
 .name {
@@ -31,15 +56,35 @@
     border-bottom: solid silver;
 }
 
-.button {
-    padding: 0 100px;
+.button-click {
+    padding: 0 80px;
     text-decoration: none;
     padding-bottom: 10px;
+    border: none;
+    background-color: white;
+    font-weight: 600;
+    color: rgb(139, 137, 137);
+}
+
+.button-click:hover {
+    color: rgb(21, 88, 144);
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-comment {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
 }
 
 .input {
     margin: 15px 0;
-    width: 97%;
+    width: 80%;
     border: 1px solid silver;
     background-color: rgb(243, 242, 242);
     border-radius: 20px;
